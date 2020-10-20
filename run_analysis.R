@@ -1,20 +1,17 @@
-download.file('https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip','Datas\\data.zip')
-unzip('Datas\\data.zip',exdir='Datas')
+act_labels <- read.table("UCI HAR Dataset\\activity_labels.txt")
+features <- read.table("UCI HAR Dataset\\features.txt")
 
-act_labels <- read.table("Datas\\UCI HAR Dataset\\activity_labels.txt")
-features <- read.table("Datas\\UCI HAR Dataset\\features.txt")
+test <- read.table("UCI HAR Dataset\\test\\X_test.txt")
 
-test <- read.table("Datas\\UCI HAR Dataset\\test\\X_test.txt")
+train <- read.table("UCI HAR Dataset\\train\\X_train.txt")
 
-train <- read.table("Datas\\UCI HAR Dataset\\train\\X_train.txt")
+act_test <- read.table("UCI HAR Dataset\\test\\y_test.txt")
 
-act_test <- read.table("Datas\\UCI HAR Dataset\\test\\y_test.txt")
+act_train <- read.table("UCI HAR Dataset\\train\\y_train.txt")
 
-act_train <- read.table("Datas\\UCI HAR Dataset\\train\\y_train.txt")
+subj_test <- read.table("UCI HAR Dataset\\test\\subject_test.txt")
 
-subj_test <- read.table("Datas\\UCI HAR Dataset\\test\\subject_test.txt")
-
-subj_train <- read.table("Datas\\UCI HAR Dataset\\train\\subject_train.txt")
+subj_train <- read.table("UCI HAR Dataset\\train\\subject_train.txt")
 
 names(test) <- features[,2]
 
